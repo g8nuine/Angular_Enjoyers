@@ -1,6 +1,37 @@
+<style>
+  .Myclass{
+    text-align: center;
+    margin-top: 50px;
+  }
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 12%;
+  }
+  .mar{
+    margin-right: 6px;
+  }
+</style>
 <div class="content" role="main">
-dec <input [(ngModel)]="number" (change)="test()"><br>
-bin <input type="checkbox"><input type="checkbox"><input type="checkbox"><input type="checkbox"><input type="checkbox"><input type="checkbox"><input type="checkbox"><input type="checkbox">
+  <form class="Myclass">
+    dec <input type="text" id="num" value="{{number}}" (change)="test()">
+    <br><br>
+    <input class="mar" type="checkbox" [(ngModel)]="checkBox1" name="n1">
+    <input class="mar" type="checkbox" [(ngModel)]="checkBox2" name="n2">
+    <input class="mar" type="checkbox" [(ngModel)]="checkBox3" name="n4">
+    <input class="mar" type="checkbox" [(ngModel)]="checkBox4" name="n8">
+    <input class="mar" type="checkbox" [(ngModel)]="checkBox5" name="n16">
+    <input class="mar" type="checkbox" [(ngModel)]="checkBox6" name="n32">
+    <input class="mar" type="checkbox" [(ngModel)]="checkBox7" name="n64">
+    <input class="mar" type="checkbox" [(ngModel)]="checkBox8" name="n128">
+  </form>
+</div>
+<div>
+  <table class="center">
+    <tr>
+      <th>1</th><th>2</th><th>4</th><th>8</th><th>16</th><th>32</th><th>64</th><th>128</th>
+    </tr>
+  </table>
 </div>
 
 
