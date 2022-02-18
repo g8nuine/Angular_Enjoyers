@@ -30,13 +30,13 @@ export class AppComponent {
     let x = (document.getElementById("num") as HTMLInputElement).value;
     let number = parseInt(x);
     this.pom = number;
-    if(this.pom > 128) {
+    if(this.pom > 255) {
       alert("error");
       this.pom = 0;
       this.number = 0;
     }
     while (this.pom != 0) {
-      if (this.pom == 128) {
+      if (this.pom >= 128) {
         this.pom -= 128;
         this.checkBox8 = true;
       }
