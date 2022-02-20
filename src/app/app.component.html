@@ -1,27 +1,17 @@
-<style>
-  .Myclass{
-    text-align: center;
-    margin-top: 50px;
-  }
-  .mar{
-    margin-right: 6px;
-  }
-</style>
-<div class="content" role="main">
-  <form class="Myclass">
-    dec <input type="text" id="num" value="{{number}}" (change)="test()">
-    <br><br>
-    <input class="mar" type="checkbox" [(ngModel)]="checkBox1" name="n1">
-    <input class="mar" type="checkbox" [(ngModel)]="checkBox2" name="n2">
-    <input class="mar" type="checkbox" [(ngModel)]="checkBox3" name="n4">
-    <input class="mar" type="checkbox" [(ngModel)]="checkBox4" name="n8">
-    <input class="mar" type="checkbox" [(ngModel)]="checkBox5" name="n16">
-    <input class="mar" type="checkbox" [(ngModel)]="checkBox6" name="n32">
-    <input class="mar" type="checkbox" [(ngModel)]="checkBox7" name="n64">
-    <input class="mar" type="checkbox" [(ngModel)]="checkBox8" name="n128">
+<div>
+  <form class="ta-center mt-50px" #numberForm="ngForm">
+    <br>
+    <label>Decimal:
+      <input type="text" name="dc" [(ngModel)]="decimal" (keyup)="setBits()">
+    </label>
+    <br>
+    <input class="mr-6px" type="checkbox" name="b1" [(ngModel)]="byte[0]" (change)="setDecimal()">
+    <input class="mr-6px" type="checkbox" name="b2" [(ngModel)]="byte[1]" (change)="setDecimal()">
+    <input class="mr-6px" type="checkbox" name="b3" [(ngModel)]="byte[2]" (change)="setDecimal()">
+    <input class="mr-6px" type="checkbox" name="b4" [(ngModel)]="byte[3]" (change)="setDecimal()">
+    <input class="mr-6px" type="checkbox" name="b5" [(ngModel)]="byte[4]" (change)="setDecimal()">
+    <input class="mr-6px" type="checkbox" name="b6" [(ngModel)]="byte[5]" (change)="setDecimal()">
+    <input class="mr-6px" type="checkbox" name="b7" [(ngModel)]="byte[6]" (change)="setDecimal()">
+    <input class="mr-6px" type="checkbox" name="b8" [(ngModel)]="byte[7]" (change)="setDecimal()">
   </form>
 </div>
-
-
-
-
