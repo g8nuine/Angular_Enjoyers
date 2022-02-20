@@ -1,6 +1,17 @@
-<div class="content" role="main">
-
+<div>
+  <form class="ta-center mt-50px" #numberForm="ngForm">
+    <br>
+    <label>Decimal:
+      <input type="text" name="dc" [(ngModel)]="decimal" (keyup)="setBits()">
+    </label>
+    <br>
+    <input class="mr-6px" type="checkbox" name="b1" [(ngModel)]="byte[0]" (change)="setDecimal()">
+    <input class="mr-6px" type="checkbox" name="b2" [(ngModel)]="byte[1]" (change)="setDecimal()">
+    <input class="mr-6px" type="checkbox" name="b3" [(ngModel)]="byte[2]" (change)="setDecimal()">
+    <input class="mr-6px" type="checkbox" name="b4" [(ngModel)]="byte[3]" (change)="setDecimal()">
+    <input class="mr-6px" type="checkbox" name="b5" [(ngModel)]="byte[4]" (change)="setDecimal()">
+    <input class="mr-6px" type="checkbox" name="b6" [(ngModel)]="byte[5]" (change)="setDecimal()">
+    <input class="mr-6px" type="checkbox" name="b7" [(ngModel)]="byte[6]" (change)="setDecimal()">
+    <input class="mr-6px" type="checkbox" name="b8" [(ngModel)]="byte[7]" (change)="setDecimal()">
+  </form>
 </div>
-
-
-
