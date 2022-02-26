@@ -16,7 +16,4 @@ export class AppComponent {
     let k = {id: this.book.id, name: this.book.name, author: this.book.author, available: this.book.available};
     this.books.push(k);
   }
-  Menu(m: MENU){
-    this.actMenu = m;
-  }
 }
