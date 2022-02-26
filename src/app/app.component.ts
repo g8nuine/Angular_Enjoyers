@@ -12,7 +12,7 @@ export class AppComponent {
   actMenu = MENU.USERS;
   menu = MENU;
 
-  add(){
+  addBook(){
     let k = {id: this.book.id, name: this.book.name, author: this.book.author, available: this.book.available};
     this.books.push(k);
   }

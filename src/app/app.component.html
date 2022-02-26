@@ -6,7 +6,7 @@
     NAME: <input type="text" [(ngModel)]="book.name"> <br><br>
     AUTHOR: <input type="text" [(ngModel)]="book.author"> <br><br>
     AVAILABLE: <input type="text" [(ngModel)]="book.available"> <br><br>
-    <button (click)="add()">Add book</button><br><br>
+    <button (click)="addBook()">Add book</button><br><br>
     books:
     <h3 *ngFor="let k of books">{{k.id}}, {{k.name}}, {{k.author}}, {{k.available}}</h3>
   </div>
