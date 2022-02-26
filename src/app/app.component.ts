@@ -9,16 +9,27 @@ enum MENU {USERS, BOOKS, BORROWINGS}
 export class AppComponent {
   books: any = [];
   book = {id: '', name: '', author: '', available: ''};
+  
+  borrowings: any = [];
+  borrowing = {id: '', book: '', user: ''};
 
   actMenu = MENU.USERS;
   menu = MENU;
 
-  addBook(){
+  addBook() {
     this.books.push({
-      id: this.book.id,
-      name: this.book.name,
-      author: this.book.author,
-      available: this.book.available
+      id:        this.book.id,
+      name:      this.book.name,
+      author:    this.book.author,
+      available: this.book.available,
+    });
+  }
+
+  addBorrowing() {
+    this.borrowings.push({
+      id:   this.borrowing.id,
+      book: this.borrowing.book,
+      user: this.borrowing.user,
     });
   }
 }
