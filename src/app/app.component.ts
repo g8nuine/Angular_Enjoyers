@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+enum MENU {USERS, BOOKS, BORROWINGS}
 
 @Component({
   selector: 'app-root',
@@ -6,24 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // A decimal number from the editbox.
-  public decimal: number = 255;
-  // That same number in binary.
-  public byte: boolean[] = [true, true, true, true,
-                            true, true, true, true];
+  books: any = [];
+  book = {id: '', name: '', author: '', available: ''};
+  actMenu = MENU.USERS;
+  menu = MENU;
 
-  // Sets the bit pattern in checkboxes.
-  public setBits() {
-    for (let i = 0; i < 8; i++) {
-      this.byte[i] = Boolean(this.decimal & 128 >> i);
-    }
+  add(){
+    let k = {id: this.book.id, name: this.book.name, author: this.book.author, available: this.book.available};
+    this.books.push(k);
   }
-  
-  // Sets the decimal value according to the checkbox (bit) pattern.
-  public setDecimal() {
-    this.decimal = 0;
-    for (let i = 0; i < 8; i++) {
-      if (this.byte[i]) this.decimal |= 128 >> i;
-    }
+  Menu(m: MENU){
+    this.actMenu = m;
   }
 }

@@ -1,17 +1,19 @@
 <div>
-  <form class="ta-center mt-50px" #numberForm="ngForm">
+  <button (click)="actMenu = menu.USERS">Users</button> <button (click)="actMenu = menu.BOOKS">Books</button> <button (click)="actMenu = menu.BORROWINGS">Borrowings</button>
+  <div *ngIf="actMenu == menu.BOOKS">
     <br>
-    <label>Decimal:
-      <input type="text" name="dc" [(ngModel)]="decimal" (keyup)="setBits()">
-    </label>
-    <br>
-    <input class="mr-6px" type="checkbox" name="b1" [(ngModel)]="byte[0]" (change)="setDecimal()">
-    <input class="mr-6px" type="checkbox" name="b2" [(ngModel)]="byte[1]" (change)="setDecimal()">
-    <input class="mr-6px" type="checkbox" name="b3" [(ngModel)]="byte[2]" (change)="setDecimal()">
-    <input class="mr-6px" type="checkbox" name="b4" [(ngModel)]="byte[3]" (change)="setDecimal()">
-    <input class="mr-6px" type="checkbox" name="b5" [(ngModel)]="byte[4]" (change)="setDecimal()">
-    <input class="mr-6px" type="checkbox" name="b6" [(ngModel)]="byte[5]" (change)="setDecimal()">
-    <input class="mr-6px" type="checkbox" name="b7" [(ngModel)]="byte[6]" (change)="setDecimal()">
-    <input class="mr-6px" type="checkbox" name="b8" [(ngModel)]="byte[7]" (change)="setDecimal()">
-  </form>
+    ID: <input type="text" [(ngModel)]="book.id"> <br><br>
+    NAME: <input type="text" [(ngModel)]="book.name"> <br><br>
+    AUTHOR: <input type="text" [(ngModel)]="book.author"> <br><br>
+    AVAILABLE: <input type="text" [(ngModel)]="book.available"> <br><br>
+    <button (click)="add()">Add book</button><br><br>
+    books:
+    <h3 *ngFor="let k of books">{{k.id}}, {{k.name}}, {{k.author}}, {{k.available}}</h3>
+  </div>
+  <div *ngIf="actMenu == menu.USERS">
+    <h2>TODO</h2>
+  </div>
+  <div *ngIf="actMenu == menu.BORROWINGS">
+    <h2>TODO</h2>
+  </div>
 </div>
