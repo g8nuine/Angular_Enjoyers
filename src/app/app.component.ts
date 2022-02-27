@@ -7,14 +7,25 @@ enum MENU {USERS, BOOKS, BORROWINGS}
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  users: any = [];
+  user = {id: '', name: '', contact: ''};
+
   books: any = [];
   book = {id: '', name: '', author: '', available: ''};
-  
+
   borrowings: any = [];
   borrowing = {id: '', book: '', user: ''};
 
   actMenu = MENU.USERS;
   menu = MENU;
+
+  addUser() {
+    this.users.push({
+      id:   this.users.id,
+      name: this.users.name,
+      contact: this.users.contact,
+    })
+  }
 
   addBook() {
     this.books.push({
