@@ -3,14 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from "@angular/forms";
+import {RouterModule} from "@angular/router";
+import {AppRoutingModule} from "./app-routing.module";
+import {KnihaZoznamComponent} from "./kniha-zoznam/kniha-zoznam.component";
+import {KnihaStrankaComponent} from "./kniha-stranka/kniha-stranka.component";
+import {KnihaFormularComponent} from "./kniha-formular/kniha-formular.component";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    KnihaFormularComponent,
+    KnihaZoznamComponent,
+    KnihaStrankaComponent,
+    KnihaFormularComponent
   ],
     imports: [
         BrowserModule,
-        FormsModule
+        FormsModule,
+        RouterModule,
+        AppRoutingModule
     ],
   providers: [],
   bootstrap: [AppComponent]
