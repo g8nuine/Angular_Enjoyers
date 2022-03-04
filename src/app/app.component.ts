@@ -20,5 +20,11 @@ export class AppComponent {
     if(m == MENU.OSOBY) {
       this.router.navigate(['/osoba']);
     }
+    if (m == MENU.KNIHY) {
+      this.router.navigate(['/kniha']);
+    }
+    if (m == MENU.VYPOZICKY) {
+      this.router.navigate(['/vypozicky']);
+    }
   }
 }
