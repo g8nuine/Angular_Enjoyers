@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {Kniha} from "../models/kniha.model";
 
 @Component({
@@ -8,7 +8,7 @@ import {Kniha} from "../models/kniha.model";
 })
 export class KnihaFormularComponent {
 
-  kniha: Kniha = {nazov: 'aaa', autor: 'bbb'}
+  kniha: Kniha = {nazov: ' ', autor: ' '}
 
   constructor() { }
 
