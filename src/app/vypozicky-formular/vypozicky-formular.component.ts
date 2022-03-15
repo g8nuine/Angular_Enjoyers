@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {Vypozicky} from "../models/vypozicky.model";
 
 @Component({
   selector: 'app-vypozicky-formular',
   templateUrl: './vypozicky-formular.component.html',
   styleUrls: ['./vypozicky-formular.component.css']
 })
-export class VypozickyFormularComponent implements OnInit {
+export class VypozickyFormularComponent{
 
   constructor() { }
 

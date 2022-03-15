@@ -1,2 +1,3 @@
-<app-kniha-formular></app-kniha-formular>
-<app-kniha-zoznam></app-kniha-zoznam>
+<app-kniha-formular [kniha]="knihaNaUpravu" (pridajKnihu) = "pridaj($event)" (upravKnihu)="uprav($event)"></app-kniha-formular>
+
+<app-kniha-zoznam [knihy]="knihy" (upravKnihu)="upravZoZozmanu($event)" (zmazKnihu)="zmaz($event)"></app-kniha-zoznam>
