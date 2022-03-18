@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-enum MENU {USERS, BOOKS, BORROWINGS}
+import {Router} from "@angular/router";
+
+enum MENU {OSOBY, KNIHY, VYPOZICKY}
 
 @Component({
   selector: 'app-root',
@@ -7,40 +9,22 @@ enum MENU {USERS, BOOKS, BORROWINGS}
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  users: any = [];
-  user = {id: '', name: '', contact: ''};
 
-  books: any = [];
-  book = {id: '', name: '', author: '', available: ''};
-
-  borrowings: any = [];
-  borrowing = {id: '', book: '', user: ''};
-
-  actMenu = MENU.USERS;
   menu = MENU;
 
-  addUser() {
-    this.users.push({
-      id:   this.users.id,
-      name: this.users.name,
-      contact: this.users.contact,
-    })
+  constructor(private router: Router) {
+
   }
 
-  addBook() {
-    this.books.push({
-      id:        this.book.id,
-      name:      this.book.name,
-      author:    this.book.author,
-      available: this.book.available,
-    });
-  }
-
-  addBorrowing() {
-    this.borrowings.push({
-      id:   this.borrowing.id,
-      book: this.borrowing.book,
-      user: this.borrowing.user,
-    });
+  otvorMenu(m: MENU) {
+    if(m == MENU.OSOBY) {
+      this.router.navigate(['/osoba']);
+    }
+    if (m == MENU.KNIHY) {
+      this.router.navigate(['/kniha']);
+    }
+    if (m == MENU.VYPOZICKY) {
+      this.router.navigate(['/vypozicky']);
+    }
   }
 }

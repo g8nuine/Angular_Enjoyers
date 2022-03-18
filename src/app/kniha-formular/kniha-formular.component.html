@@ -1,0 +1,10 @@
+
+<form [formGroup] = "formular">
+  nazov:
+  <input formControlName="nazov"><br>
+  autor:
+  <input formControlName="autor"><br>
+
+  <button *ngIf="formular.value.id === null" (click)="pridaj()">Pridaj</button>
+  <button *ngIf="formular.value.id !== null" (click) = "uprav()">Uprav</button>
+</form>

@@ -1,34 +1,6 @@
-<div>
-  <button (click)="actMenu = menu.USERS">Users</button> <button (click)="actMenu = menu.BOOKS">Books</button> <button (click)="actMenu = menu.BORROWINGS">Borrowings</button>
-
-  <div *ngIf="actMenu == menu.USERS">
-    <br>
-    ID: <input type="text" [(ngModel)]="users.id"><br>
-    BOOK: <input type="text" [(ngModel)]="users.name"><br>
-    CONTACT: <input type="text" [(ngModel)]="users.contact"><br>
-    <button (click)="addUser()">Add user</button><br><br>
-    users:
-    <div *ngFor="let u of users">{{u.id}}, {{u.name}}, {{u.contact}}</div>
-  </div>
-
-  <div *ngIf="actMenu == menu.BOOKS">
-    <br>
-    ID: <input type="text" [(ngModel)]="book.id"><br>
-    NAME: <input type="text" [(ngModel)]="book.name"><br>
-    AUTHOR: <input type="text" [(ngModel)]="book.author"><br>
-    AVAILABLE: <input type="text" [(ngModel)]="book.available"><br>
-    <button (click)="addBook()">Add book</button><br><br>
-    books:
-    <div *ngFor="let b of books">{{b.id}}, {{b.name}}, {{b.author}}, {{b.available}}</div>
-  </div>
-
-  <div *ngIf="actMenu == menu.BORROWINGS">
-    <br>
-    ID: <input type="text" [(ngModel)]="borrowing.id"><br>
-    BOOK: <input type="text" [(ngModel)]="borrowing.book"><br>
-    USER: <input type="text" [(ngModel)]="borrowing.user"><br>
-    <button (click)="addBorrowing()">Add borrowing</button><br><br>
-    borrowings:
-    <div *ngFor="let b of borrowings">{{b.id}}, {{b.book}}, {{b.user}}</div>
-  </div>
-</div>
+<button (click)="otvorMenu(menu.OSOBY)">osoby</button>
+<button (click)="otvorMenu(menu.KNIHY)">knihy</button>
+<button (click)="otvorMenu(menu.VYPOZICKY)">vypozicky</button>
+<br>
+<br>
+<router-outlet></router-outlet>
